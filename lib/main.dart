@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pasca_persalinan/materi/pengertian.dart';
+import 'package:pasca_persalinan/materi/topic3.dart';
+import 'package:pasca_persalinan/materi/topic4.dart';
 
 void main() {
   runApp(MyApp());
@@ -199,7 +201,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                       icon: Icon(Icons.receipt),
                                       color: Colors.orange,
                                       iconSize: 30.0,
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    Topic3()));
+                                      },
                                     ),
                                   ),
                                   SizedBox(height: 8.0),
@@ -229,7 +237,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                       icon: Icon(Icons.airport_shuttle),
                                       color: Colors.pink,
                                       iconSize: 30.0,
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    Topic4()));
+                                      },
                                     ),
                                   ),
                                   SizedBox(height: 8.0),

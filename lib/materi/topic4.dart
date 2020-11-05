@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_plugin_pdf_viewer/flutter_plugin_pdf_viewer.dart';
 
-class Pengertian extends StatefulWidget {
+class Topic4 extends StatefulWidget {
   @override
-  _PengertianState createState() => _PengertianState();
+  _Topic4State createState() => _Topic4State();
 }
 
-class _PengertianState extends State<Pengertian> {
+class _Topic4State extends State<Topic4> {
   PDFDocument document;
 
   @override
@@ -17,7 +17,7 @@ class _PengertianState extends State<Pengertian> {
 
   loadfile() async {
     document = await PDFDocument.fromURL(
-        "https://firebasestorage.googleapis.com/v0/b/sikmas-b7c8b.appspot.com/o/Pengertian%20Masa%20Nifas.pdf?alt=media&token=cfa00f73-2629-478d-b4ce-17d22372f05d");
+        "https://firebasestorage.googleapis.com/v0/b/sikmas-b7c8b.appspot.com/o/kunjungan%20masa%20nifas.pdf?alt=media&token=49ef3564-a636-4b56-8aa1-eda668a81d5b");
 
     setState(() {
       document = document;
@@ -28,7 +28,7 @@ class _PengertianState extends State<Pengertian> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Pengertian Nifas'),
+        title: Text('Kunjungan Masa Nifas'),
       ),
       body: Center(child: PDFViewer(document: document)),
     );
