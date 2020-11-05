@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pasca_persalinan/page1.dart';
+import 'package:pasca_persalinan/materi/pengertian.dart';
 
 void main() {
   runApp(MyApp());
@@ -143,7 +143,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                       icon: Icon(Icons.send),
                                       color: Colors.purple,
                                       iconSize: 30.0,
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    Pengertian()));
+                                      },
                                     ),
                                   ),
                                   SizedBox(height: 8.0),
@@ -162,10 +168,16 @@ class _MyHomePageState extends State<MyHomePage> {
                                     color: Colors.blue.withOpacity(0.1),
                                     child: IconButton(
                                       padding: EdgeInsets.all(15.0),
-                                      icon: Icon(Icons.credit_card),
+                                      icon: Icon(Icons.announcement),
                                       color: Colors.blue,
                                       iconSize: 30.0,
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    Pengertian()));
+                                      },
                                     ),
                                   ),
                                   SizedBox(height: 8.0),
@@ -214,7 +226,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     color: Colors.pink.withOpacity(0.1),
                                     child: IconButton(
                                       padding: EdgeInsets.all(15.0),
-                                      icon: Icon(Icons.monetization_on),
+                                      icon: Icon(Icons.airport_shuttle),
                                       color: Colors.pink,
                                       iconSize: 30.0,
                                       onPressed: () {},
@@ -236,7 +248,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     color: Colors.purpleAccent.withOpacity(0.1),
                                     child: IconButton(
                                       padding: EdgeInsets.all(15.0),
-                                      icon: Icon(Icons.favorite),
+                                      icon: Icon(Icons.border_color),
                                       color: Colors.purpleAccent,
                                       iconSize: 30.0,
                                       onPressed: () {},
@@ -258,7 +270,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     color: Colors.deepPurple.withOpacity(0.1),
                                     child: IconButton(
                                       padding: EdgeInsets.all(15.0),
-                                      icon: Icon(Icons.attach_money),
+                                      icon: Icon(Icons.favorite),
                                       color: Colors.deepPurple,
                                       iconSize: 30.0,
                                       onPressed: () {},
