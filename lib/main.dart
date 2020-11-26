@@ -294,7 +294,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     color: Colors.deepPurple.withOpacity(0.1),
                                     child: IconButton(
                                       padding: EdgeInsets.all(15.0),
-                                      icon: Icon(Icons.favorite),
+                                      icon: Icon(Icons.child_care),
                                       color: Colors.deepPurple,
                                       iconSize: 30.0,
                                       onPressed: () {
