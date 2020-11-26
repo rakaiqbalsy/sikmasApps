@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:pasca_persalinan/materi/pengertian.dart';
+import 'package:pasca_persalinan/materi/topic2.dart';
 import 'package:pasca_persalinan/materi/topic3.dart';
 import 'package:pasca_persalinan/materi/topic4.dart';
+import 'package:pasca_persalinan/materi/topic5.dart';
+import 'package:pasca_persalinan/materi/topic6.dart';
+import 'package:pasca_persalinan/materi/topic7.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'SIKMAS',
-      theme: ThemeData(primarySwatch: Colors.purple
+      theme: ThemeData(primarySwatch: Colors.red
           // visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
       home: MyHomePage(title: 'Homepage'),
@@ -81,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ClipPath(
                   clipper: CustomShapeClipper(),
                   child: Container(
-                    height: 350.0,
+                    height: 200.0,
                     decoration: BoxDecoration(color: primaryColor),
                   ),
                 ),
@@ -117,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   padding: EdgeInsets.only(top: 120.0, right: 25.0, left: 25.0),
                   child: Container(
                     width: double.infinity,
-                    height: 500.0,
+                    height: 400.0,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.all(Radius.circular(20.0)),
@@ -167,18 +171,18 @@ class _MyHomePageState extends State<MyHomePage> {
                                 children: <Widget>[
                                   Material(
                                     borderRadius: BorderRadius.circular(100.0),
-                                    color: Colors.blue.withOpacity(0.1),
+                                    color: Colors.red.withOpacity(0.1),
                                     child: IconButton(
                                       padding: EdgeInsets.all(15.0),
-                                      icon: Icon(Icons.announcement),
-                                      color: Colors.blue,
+                                      icon: Icon(Icons.warning),
+                                      color: Colors.red,
                                       iconSize: 30.0,
                                       onPressed: () {
                                         Navigator.push(
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    Pengertian()));
+                                                    Topic2()));
                                       },
                                     ),
                                   ),
@@ -265,7 +269,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                       icon: Icon(Icons.border_color),
                                       color: Colors.purpleAccent,
                                       iconSize: 30.0,
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    Topic5()));
+                                      },
                                     ),
                                   ),
                                   SizedBox(height: 8.0),
@@ -287,7 +297,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                       icon: Icon(Icons.favorite),
                                       color: Colors.deepPurple,
                                       iconSize: 30.0,
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    Topic6()));
+                                      },
                                     ),
                                   ),
                                   SizedBox(height: 8.0),
@@ -302,9 +318,9 @@ class _MyHomePageState extends State<MyHomePage> {
                             ],
                           ),
                         ),
-                        SizedBox(height: 20.0),
+                        SizedBox(height: 10.0),
                         Divider(),
-                        SizedBox(height: 20.0),
+                        SizedBox(height: 10.0),
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 25.0),
                           child: Row(
@@ -326,42 +342,47 @@ class _MyHomePageState extends State<MyHomePage> {
                                 child: IconButton(
                                   icon: Icon(Icons.arrow_forward_ios),
                                   color: Colors.blueAccent,
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => Topic7()));
+                                  },
                                 ),
                               )
                             ],
                           ),
                         ),
-                        SizedBox(height: 20.0),
-                        Divider(),
-                        SizedBox(height: 20.0),
-                        Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 25.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Expanded(
-                                child: Text(
-                                  'Tentang',
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                      color: Colors.grey,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                              SizedBox(width: 40.0),
-                              Material(
-                                borderRadius: BorderRadius.circular(100.0),
-                                color: Colors.blueAccent.withOpacity(0.1),
-                                child: IconButton(
-                                  icon: Icon(Icons.arrow_forward_ios),
-                                  color: Colors.blueAccent,
-                                  onPressed: () {},
-                                ),
-                              )
-                            ],
-                          ),
-                        )
+                        // SizedBox(height: 20.0),
+                        // Divider(),
+                        // SizedBox(height: 20.0),
+                        // Padding(
+                        //   padding: EdgeInsets.symmetric(horizontal: 25.0),
+                        //   child: Row(
+                        //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        //     children: <Widget>[
+                        //       Expanded(
+                        //         child: Text(
+                        //           'Tentang',
+                        //           textAlign: TextAlign.left,
+                        //           style: TextStyle(
+                        //               color: Colors.grey,
+                        //               fontWeight: FontWeight.bold),
+                        //         ),
+                        //       ),
+                        //       SizedBox(width: 40.0),
+                        //       Material(
+                        //         borderRadius: BorderRadius.circular(100.0),
+                        //         color: Colors.blueAccent.withOpacity(0.1),
+                        //         child: IconButton(
+                        //           icon: Icon(Icons.arrow_forward_ios),
+                        //           color: Colors.blueAccent,
+                        //           onPressed: () {},
+                        //         ),
+                        //       )
+                        //     ],
+                        //   ),
+                        // )
                       ],
                     ),
                   ),
